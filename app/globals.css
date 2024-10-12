@@ -25,3 +25,30 @@ body {
     text-wrap: balance;
   }
 }
+
+.gradient-text {
+  background-clip: text;
+  background-repeat: no-repeat;
+  box-decoration-break: clone;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background-image: url(/hero_gradient.jpg);
+  background-position: bottom;
+  background-size: 100% 100%;
+  margin-top: 7px;
+  animation: moveGradient 2s ease-out;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-size: 400% 400%;
+    opacity: 0;
+    scale: 90%;
+    background-position: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+    opacity: 1;
+    scale: 100%;
+    background-position: 50% 0%;
+  }
+}
