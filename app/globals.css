@@ -35,20 +35,50 @@ body {
   background-position: bottom;
   background-size: 100% 100%;
   margin-top: 7px;
+}
+
+.gradient-animation {
   animation: moveGradient 2s ease-out;
 }
 
 @keyframes moveGradient {
   0% {
     background-size: 400% 400%;
-    opacity: 0;
-    scale: 90%;
+    opacity: 1;
     background-position: 100% 0%;
+    transform: translateY(100%);
   }
   100% {
     background-size: 100% 100%;
     opacity: 1;
-    scale: 100%;
     background-position: 50% 0%;
+    transform: translateY(0%);
+
   }
+}
+
+body {
+  overscroll-behavior: none;
+  color: white;
+}
+
+h1 {
+  font-size: 30vw;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.7em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none; /* Hide scrollbar width */
+  scrollbar-color: transparent transparent; /* Hide scrollbar track and thumb */
+}
+* {
+  -ms-overflow-style: none; /* Hide scrollbar for IE and older Edge */
 }

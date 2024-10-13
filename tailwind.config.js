@@ -21,9 +21,14 @@ module.exports = {
           "0%" : { opacity: 0, scale: '90%' },
           "100%" : { opacity: 100, scale: '100%' }
         },
+        slideUp: {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
       },
       animation: {
-        fadeIn : "fadeIn 2s ease-out"
+        fadeIn : "fadeIn 2s ease-out",
+        slideUp: "slideUp 2s ease-in forwards",
       }
     },
   },
